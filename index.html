@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <h1>Anubhav Kukreti</h1>
+  </nav>
+
+  <section class="hero">
+    <h2>Web Developer</h2>
+    <p>Building clean & interactive web apps</p>
+  </section>
+
+  <section class="projects">
+
+    <div class="card">
+      <a href="http://127.0.0.1:3002/index.html?vscode-livepreview=true">
+        <h3>Faulty Calculator</h3>
+      </a>
+
+    </div>
+
+    <div class="card">
+      <a href="">
+        <h3>Netflix Clone</h3>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="http://127.0.0.1:3004/index.html?vscode-livepreview=true">
+        <h3>Amazon Clone</h3>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="">
+        <h3>Spotify Clone</h3>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="">
+        <h3>Weather App</h3>
+      </a>
+    </div>
+
+    <div class="particles">
+      <div class="layer back"></div>
+      <div class="layer mid"></div>
+      <div class="layer front"></div>
+    </div>  
+
+
+    <script>
+      function createParticles(layer, count, speedMin, speedMax) {
+        const container = document.querySelector(layer);
+
+        for (let i = 0; i < count; i++) {
+          const span = document.createElement('span');
+
+          span.style.left = Math.random() * 100 + 'vw';
+          span.style.animationDuration =
+            (speedMin + Math.random() * (speedMax - speedMin)) + 's';
+          span.style.animationDelay = Math.random() * 20 + 's';
+          span.style.opacity = Math.random();
+
+          container.appendChild(span);
+        }
+      }
+
+      createParticles('.back', 40, 20, 40);   // slow = far
+      createParticles('.mid', 30, 12, 25);    // medium
+      createParticles('.front', 20, 8, 15);   // fast = close
+    </script>
+
+  </section>
+
+</body>
+
+</html>
