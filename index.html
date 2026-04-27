@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#020617">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Anubhav Portfolio">
+
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,8 +20,8 @@
 
     <div class="nav__actions">
       <span>Search 🔍</span>
-      <a href="https://maingitportfoliowebsite.netlify.app/" target="_blank" class="btn">
-        Open App
+      <a href="https://wa.me/919368890761" target="_blank" class="btn">
+        Contact Me
       </a>
     </div>
   </nav>
@@ -31,21 +34,15 @@
   <section class="projects">
 
     <div class="card">
-      <a href="https://portfoliocloneamazon.netlify.app/">
-        Amazon Clone
-      </a>
+      <a href="https://portfoliocloneamazon.netlify.app/">Amazon Clone</a>
     </div>
 
     <div class="card">
-      <a href="https://streamxmov.netlify.app">
-        StreamX App
-      </a>
+      <a href="https://streamxmov.netlify.app">StreamX App</a>
     </div>
 
     <div class="card">
-      <a href="https://portfoliocalfaultyculator.netlify.app/">
-        Faulty Calculator
-      </a>
+      <a href="https://portfoliocalfaultyculator.netlify.app/">Faulty Calculator</a>
     </div>
 
     <div class="card">
@@ -58,33 +55,85 @@
 
   </section>
 
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">Who am I?</button>
+      <div class="faq-answer">
+        <p>I’m Anubhav Kukreti, a frontend developer building modern web apps.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How can you contact me?</button>
+      <div class="faq-answer">
+        <p>Connect with me via GitHub or email for collaboration.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What projects have I built?</button>
+      <div class="faq-answer">
+        <p>Amazon clone, StreamX, faulty calculator and more.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Are my websites responsive?</button>
+      <div class="faq-answer">
+        <p>Yes, all projects work on mobile, tablet, and desktop.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I view them live?</button>
+      <div class="faq-answer">
+        <p>Yes, live links are available above.</p>
+      </div>
+    </div>
+  </section>
+
   <div class="particles">
     <div class="layer back"></div>
     <div class="layer mid"></div>
     <div class="layer front"></div>
   </div>
+
   <script>
-      function createParticles(layer, count, speedMin, speedMax) {
-        const container = document.querySelector(layer);
+    function createParticles(layer, count, speedMin, speedMax) {
+      const container = document.querySelector(layer);
 
-        for (let i = 0; i < count; i++) {
-          const span = document.createElement('span');
+      for (let i = 0; i < count; i++) {
+        const span = document.createElement('span');
 
-          span.style.left = Math.random() * 100 + 'vw';
-          span.style.animationDuration =
-            (speedMin + Math.random() * (speedMax - speedMin)) + 's';
-          span.style.animationDelay = Math.random() * 20 + 's';
-          span.style.opacity = Math.random();
+        span.style.left = Math.random() * 100 + 'vw';
+        span.style.animationDuration =
+          (speedMin + Math.random() * (speedMax - speedMin)) + 's';
+        span.style.animationDelay = Math.random() * 20 + 's';
+        span.style.opacity = Math.random();
 
-          container.appendChild(span);
-        }
+        container.appendChild(span);
       }
+    }
 
-      createParticles('.back', 40, 20, 40);   // slow = far
-      createParticles('.mid', 30, 12, 25);    // medium
-      createParticles('.front', 20, 8, 15);   // fast = close
-    </script>
+    createParticles('.back', 40, 20, 40);
+    createParticles('.mid', 30, 12, 25);
+    createParticles('.front', 20, 8, 15);
 
+    const faqs = document.querySelectorAll(".faq-item");
+
+    faqs.forEach(item => {
+      item.querySelector(".faq-question").addEventListener("click", () => {
+
+        faqs.forEach(i => {
+          if (i !== item) i.classList.remove("active");
+        });
+
+        item.classList.toggle("active");
+      });
+    });
+  </script>
 
 </body>
 
