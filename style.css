@@ -310,3 +310,63 @@ nav {
     transform: translateY(-120vh) scale(1);
   }
 }
+
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .nav__actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero {
+    padding: 100px 15px 40px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .projects {
+    padding: 30px 15px;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card a {
+    font-size: 1.1rem;
+  }
+
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
