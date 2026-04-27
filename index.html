@@ -10,7 +10,14 @@
 <body>
 
   <nav>
-    <h1>Anubhav Kukreti</h1>
+    <h1 class="logo">Anubhav Kukreti</h1>
+
+    <div class="nav__actions">
+      <span>Search 🔍</span>
+      <a href="https://mainportfolioweb.netlify.app" target="_blank" class="btn">
+        Open App
+      </a>
+    </div>
   </nav>
 
   <section class="hero">
@@ -22,43 +29,36 @@
 
     <div class="card">
       <a href="http://127.0.0.1:3002/index.html?vscode-livepreview=true">
-        <h3>Faulty Calculator</h3>
+        Faulty Calculator
       </a>
-
     </div>
 
     <div class="card">
-      <a href="">
-        <h3>Netflix Clone</h3>
-      </a>
+      <a href="">Netflix Clone</a>
     </div>
 
     <div class="card">
       <a href="http://127.0.0.1:3004/index.html?vscode-livepreview=true">
-        <h3>Amazon Clone</h3>
+        Amazon Clone
       </a>
     </div>
 
     <div class="card">
-      <a href="">
-        <h3>Spotify Clone</h3>
-      </a>
+      <a href="">Spotify Clone</a>
     </div>
 
     <div class="card">
-      <a href="">
-        <h3>Weather App</h3>
-      </a>
+      <a href="">Weather App</a>
     </div>
 
-    <div class="particles">
-      <div class="layer back"></div>
-      <div class="layer mid"></div>
-      <div class="layer front"></div>
-    </div>  
+  </section>
 
-
-    <script>
+  <div class="particles">
+    <div class="layer back"></div>
+    <div class="layer mid"></div>
+    <div class="layer front"></div>
+  </div>
+  <script>
       function createParticles(layer, count, speedMin, speedMax) {
         const container = document.querySelector(layer);
 
@@ -80,7 +80,6 @@
       createParticles('.front', 20, 8, 15);   // fast = close
     </script>
 
-  </section>
 
 </body>
 
